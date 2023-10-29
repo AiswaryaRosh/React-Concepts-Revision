@@ -17,6 +17,13 @@
     height: 80px;
 }
 
+.operations-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 
 .body-container {
     display: flex;
@@ -37,8 +44,21 @@
 .restro-card {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap !important;
+    word-break: break-all;
     width: 200px;
     /* height: 230px; */
+    border: 1px solid gray;
+    background-color: azure;
+}
+
+.shimmer-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap !important;
+    word-break: break-all;
+    width: 200px;
+    height: 230px;
     border: 1px solid gray;
     background-color: azure;
 }
@@ -75,4 +95,8 @@ ul > li {
     background-color: cadetblue;
     justify-content: space-between;
     align-items: center;
+}
+
+.login-btn {
+    
 }

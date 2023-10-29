@@ -1,6 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-const restaurentsList =  [
+export const restaurentsList =  [
     {
     info: {
     id: "43836",
@@ -1949,68 +1947,3 @@ const restaurentsList =  [
     }
     }
     ];
-
-const HeaderComponent = () => {
-    return (
-      <div className="header-container">
-        <div>
-          <img  className="logo" src="https://w7.pngwing.com/pngs/894/279/png-transparent-online-food-ordering-food-delivery-grubhub-others-food-service-logo-thumbnail.png" />
-        </div>
-        <div className="nav-container">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-      </div>
-    );
-};
-
-const RestroCards = (props) => {
-   // console.log(props)
-    const {result} = props;
-    console.log(result);
-    console.log(props)
-    return (
-      <div className="restro-card">
-        <div>
-          <img
-            className="food-image"
-            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ogidjgqgh5w4otvuiipj"
-          />
-        </div>
-        <div>{props.resData.info.name}</div>
-        <div>Biriyani, Northindian, Asian</div>
-        <div>4.4 stars</div>
-        <div>Delivery in 38 min</div>
-      </div>
-    );
-};
-
-const BodyComponent = () => {
-   return (
-     <div className="body-container">
-       {/* <div className="Search-box">Search Box</div> */}
-       <div className="restro-cards">
-         {
-         restaurentsList.map((item) => {
-           return <RestroCards resData={item} key={item.info.id} />;
-         })
-         }
-       </div>
-     </div>
-   );
-};
-const AppLayoutComponent = () => {
-    return (
-        <div className="layout-container">
-            <HeaderComponent/>
-            <BodyComponent/>
-            <div>Footer component</div>
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<AppLayoutComponent />)
